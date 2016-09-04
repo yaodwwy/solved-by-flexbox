@@ -248,7 +248,7 @@ gulp.task('deploy', ['default'], function() {
   mkdir('_tmp');
   cd('_tmp');
   exec('git init');
-  exec('git remote add origin git@github.com:philipwalton/' + REPO + '.git');
+  exec('git remote add origin git@github.com:hufan-Akari/' + REPO + '.git');
   exec('git pull origin gh-pages');
 
   // Delete all the existing files and add

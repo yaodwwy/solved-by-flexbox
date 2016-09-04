@@ -1,33 +1,49 @@
 ---
 template: default.html
-title: Better, Simpler Grid Systems
-excerpt: Flexbox gives us most of the features we want from a grid system out of the box. And sizing and alignment are just one or two properties away.
+title: 更好，更简单的栅格系统
+excerpt: Flexbox 满足了我们大部分对于栅格系统的需求。尺寸、对齐仅用一两个属性就能搞定。
 ---
 
-Most grid systems today use one of two layout methods: `float` or `inline-block`. But neither of these methods were really intended to be used for layout and as a result have pretty significant problems and limitations.
+现今大部分栅格系统都使用了两种布局方式中的一种：浮动 (`float`) 或者 內联块 (`inline-block`)。但是它们的初衷均不是真的用于布局 (layout)，也因此导致了诸多的问题和限制。
+<!-- Most grid systems today use one of two layout methods: `float` or `inline-block`. But neither of these methods were really intended to be used for layout and as a result have pretty significant problems and limitations. -->
 
-Using floats requires clearing them which has a whole host of layout issues, most notoriously that clearing an element sometimes forces it below an unrelated part of the page (take this [Bootstrap issue](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) for example). In addition, clearing floats usually requires using both before and after pseudo-elements, preventing you from using them for something else.
+使用浮动 (float) 需要清楚浮动因此牵连出了一堆布局问题，最臭名昭著的是清除一个元素的浮动有时会强制它出现在一个不相关的页面部分的下边 (例如 [Bootstrap issue](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) )。并且，使用清除浮动通常会同时使用 before 和 after 两个伪元素，导致你不能将它们使用于其他用途。
+<!-- Using floats requires clearing them which has a whole host of layout issues, most notoriously that clearing an element sometimes forces it below an unrelated part of the page (take this [Bootstrap issue](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) for example). In addition, clearing floats usually requires using both before and after pseudo-elements, preventing you from using them for something else. -->
 
-Inline block layouts must address the problem of [white-space between inline-block items](http://css-tricks.com/fighting-the-space-between-inline-block-elements/), and all of the [solutions](http://davidwalsh.name/remove-whitespace-inline-block) to that problem are [hacky](https://github.com/suitcss/components-grid/blob/master/lib/grid.css#L30) and [annoying](https://twitter.com/thierrykoblentz/status/305152267374428160).
+内联块布局最著名的问题是 [内联块之间孔空白问题](http://css-tricks.com/fighting-the-space-between-inline-block-elements/), 以及其所有 [解决方案](http://davidwalsh.name/remove-whitespace-inline-block) 都是 [hack](https://github.com/suitcss/components-grid/blob/master/lib/grid.css#L30) 和 [恼人](https://twitter.com/thierrykoblentz/status/305152267374428160) 的。
+<!-- Inline block layouts must address the problem of [white-space between inline-block items](http://css-tricks.com/fighting-the-space-between-inline-block-elements/), and all of the [solutions](http://davidwalsh.name/remove-whitespace-inline-block) to that problem are [hacky](https://github.com/suitcss/components-grid/blob/master/lib/grid.css#L30) and [annoying](https://twitter.com/thierrykoblentz/status/305152267374428160). -->
 
-Flexbox not only eliminates these problems, it opens up an entirely new world of possibilities.
+Flexbox 布局不仅结局了这些问题，还开启全新可能性的新世界的大门。
+<!-- Flexbox not only eliminates these problems, it opens up an entirely new world of possibilities. -->
 
-## Features of a Flexbox Grid System
+## Flexbox 栅格系统特性
+<!-- ## Features of a Flexbox Grid System -->
 
-Grid systems usually come with a myriad of sizing options, but the vast majority of the time you just want two or three elements side-by-side. Given this, why should we be required to put sizing classes on every single cell?
+栅格系统通常有数不清的尺寸选项，但是大部分时间你仅仅想要一个两栏或三栏的栅格系统。既然如此，我们为什么一定要把尺寸属性 (sizing classes) 写到每一个格子 (cell) 里？
+<!-- Grid systems usually come with a myriad of sizing options, but the vast majority of the time you just want two or three elements side-by-side. Given this, why should we be required to put sizing classes on every single cell? -->
 
-Listed below are some of my criteria for an ideal grid system. Fortunately, with Flexbox we get most of these features for free.
+下列是我对于一个理想的栅格系统的标准。幸运的是，Flexbox 布局满足了大部分特性。
+<!-- Listed below are some of my criteria for an ideal grid system. Fortunately, with Flexbox we get most of these features for free. -->
 
-- By default, each grid cell is the same width and height as every other cell in the row. Basically they all size to fit by default.
+
+- 每一行里的每一个栅格默认都是同宽同高。默认自适应。
+- 为了足够灵活，能够添加尺寸属性到单独的栅格中。没有添加的，仍然简单地平分剩下的可用空间。
+- 支持响应式布局，可以添加媒体查询到栅格中。
+- 每一个栅格可以在纯直方向上置顶，置底，剧中。
+- 如果让所有栅格拥有一致的大小和对其方式，在容器上添加属性，子元素能够继承，而不需要无意义的重复。
+- 栅格能够任意的嵌套。
+<!-- - By default, each grid cell is the same width and height as every other cell in the row. Basically they all size to fit by default.
 - For finer control, you can add sizing classes to individual cells. Without these classes, the cells simply divide up the available space as usual.
 - For responsive grids, you can add media query-specific classes to the cells.
 - Individual cells can be aligned vertically to the top, bottom, or middle.
 - When you want all of the cells in a grid to have the same sizing, media, or alignment values, you should be able to just add a single class to the container to avoid unnecessary repetition.
-- Grids can be nested as many levels deep as needed.
+- Grids can be nested as many levels deep as needed. -->
 
-### Basic Grids
+### 基础栅格系统
+<!-- ### Basic Grids -->
 
-The grid cells below do not specify any widths, they just naturally space themselves equally and expand to fit the entire row. They're also equal height by default.
+下面的栅格没有指定特定的宽度，它们自然的平分每一行的空间并撑满每一个行，并且高度默认都是相同的。
+<!-- The grid cells below do not specify any widths, they just naturally space themselves equally and expand to fit the entire row. They're also equal height by default. -->
 
 <div class="Grid Grid--gutters u-textCenter">
   <div class="Grid-cell">
@@ -68,7 +84,7 @@ The grid cells below do not specify any widths, they just naturally space themse
 <div class="Grid Grid--gutters Grid--flexCells">
   <div class="Grid-cell">
     <div class="Demo">
-      Full-height, even when my content doesn't fill the space.
+      高度撑满，即使内容没有填满空间。
     </div>
   </div>
 
@@ -79,11 +95,14 @@ The grid cells below do not specify any widths, they just naturally space themse
   </div>
 </div>
 
-### Individual Sizing
+### 独立的尺寸
+<!-- ### Individual Sizing -->
 
-When equal widths aren't what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal.
+当你的需求不是等宽栅格的时候，可以添加尺寸属性到独立的栅格中。没有尺寸属性的栅格将简单地继续平分剩下的可用空间。
+<!-- When equal widths aren't what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal. -->
 
-The cells below labeled "auto" do not have sizing classes specified.
+下边加了 "auto" 标签的栅格没有指定任何尺寸属性。
+<!-- The cells below labeled "auto" do not have sizing classes specified. -->
 
 <div class="Grid Grid--gutters u-textCenter">
   <div class="Grid-cell u-1of2">
@@ -118,11 +137,13 @@ The cells below labeled "auto" do not have sizing classes specified.
   </div>
 </div>
 
-### Responsive
+### 响应式
 
-Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly.
+响应式栅格系统通过添加媒体查询到栅格元素或栅格容器来实现。当满足媒体查询的条件时，栅格系统就能自动调整。
+<!-- Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly. -->
 
-The cells below should be full width by default and scaled to fit above `48em`. Resize your browser to see them in action.
+下边的这些栅格应在低于 `48em` 时撑满一行，调整你的浏览器来查看效果。
+<!-- The cells below should be full width by default and scaled to fit above `48em`. Resize your browser to see them in action. -->
 
 <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter">
   <div class="Grid-cell">
@@ -144,9 +165,11 @@ The cells below should be full width by default and scaled to fit above `48em`. 
   </div>
 </div>
 
-### Grid-ception
+### 栅格签到
+<!-- ### Grid-ception -->
 
-Grid components are infinitely nestable inside of other grid components.
+栅格可以无限嵌套于另一个栅格中。
+<!-- Grid components are infinitely nestable inside of other grid components. -->
 
 <div class="Grid Grid--gutters Grid--flexCells u-textCenter">
   <div class="Grid-cell">
@@ -175,14 +198,16 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
 </div>
 
-## Alignment Features
+## 对其特性
+<!-- ## Alignment Features -->
 
-### Top-aligned Grid Cells
+### 置顶对齐栅格
+<!-- ### Top-aligned Grid Cells -->
 
 <div class="Grid Grid--gutters Grid--top">
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be top-aligned.
+      我应该置顶对齐。
     </div>
   </div>
   <div class="Grid-cell u-1of2">
@@ -192,17 +217,18 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be top-aligned.
+      我应该置顶对齐。
     </div>
   </div>
 </div>
 
-### Bottom-aligned Grid Cells
+### 置底对齐栅格
+<!-- ### Bottom-aligned Grid Cells -->
 
 <div class="Grid Grid--gutters Grid--bottom">
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be bottom-aligned.
+      我应该置底对齐栅格。
     </div>
   </div>
   <div class="Grid-cell">
@@ -212,17 +238,18 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be bottom-aligned.
+    我应该置底对齐栅格。
     </div>
   </div>
 </div>
 
-### Vertically Centered Grid Cells
+### 垂直居中栅格
+<!-- ### Vertically Centered Grid Cells -->
 
 <div class="Grid Grid--gutters Grid--center">
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be vertically-centered with the cell to its right.
+      我应该相对于我右边的格子垂直居中。
     </div>
   </div>
   <div class="Grid-cell">
@@ -231,12 +258,13 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
 </div>
 
-### Mixed Vertical Alignment
+### 混合垂直对齐
+<!-- ### Mixed Vertical Alignment -->
 
 <div class="Grid Grid--gutters">
   <div class="Grid-cell Grid-cell--top">
     <div class="Demo">
-      This cell should be top aligned.
+      我应该置顶对齐。
     </div>
   </div>
   <div class="Grid-cell">
@@ -245,17 +273,18 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
   <div class="Grid-cell Grid-cell--center">
     <div class="Demo">
-      This cell should be center-aligned.
+      我应该垂直居中。
     </div>
   </div>
   <div class="Grid-cell Grid-cell--bottom">
     <div class="Demo">
-      This cell should be bottom-aligned.
+      我应该置底对齐。
     </div>
   </div>
 </div>
 
-## The HTML
+## HTML 代码
+<!-- ## The HTML -->
 
 ```html
 <div class="Grid">
@@ -265,9 +294,11 @@ Grid components are infinitely nestable inside of other grid components.
 </div>
 ```
 
-## The CSS
+## CSS 代码
+<!-- ## The CSS -->
 
-### Basic Grid Styles
+### 基础栅格系统
+<!-- ### Basic Grid Styles -->
 
 ```css
 .Grid {
@@ -279,7 +310,8 @@ Grid components are infinitely nestable inside of other grid components.
 }
 ```
 
-### Grid Style Modifiers
+### 栅格系统修饰属性
+<!-- ### Grid Style Modifiers -->
 
 ```css
 /* With gutters */
@@ -313,7 +345,8 @@ Grid components are infinitely nestable inside of other grid components.
 }
 ```
 
-### Responsive Modifiers (a mobile-first approach)
+### 响应式修饰属性 (移动设备优先)
+<!-- ### Responsive Modifiers (a mobile-first approach) -->
 
 ```css
 /* Base classes for all media */
@@ -372,4 +405,5 @@ Grid components are infinitely nestable inside of other grid components.
 }
 ```
 
-View the full [source](https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/grid.css) for the `Grid` component used in this demo on Github.
+在 Github 中查看这个 demo 中完整的栅格组件 [源代码](https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/grid.css)
+<!-- View the full [source](https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/grid.css) for the `Grid` component used in this demo on Github. -->

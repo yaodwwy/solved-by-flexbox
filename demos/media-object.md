@@ -13,7 +13,7 @@ excerpt: 创建含有固定或变化的头像的媒体对象，不用担心溢�
 媒体对象的正文不能出现在头像的下边，通过创建一个 [块格式化内容](http://www.stubbornella.org/content/2013/07/31/re-visiting-the-secret-power-of-block-fomatting-context/) 或者使用一个与图片等宽的左外边距(margin)/内边距(padding) 。媒体对象必须正文清除浮动，通过指定 `overflow:hidden` 或使用伪元素来达成。
 <!-- The media object's body must prevent text from wrapping below the image by either creating a [block formatting context](http://www.stubbornella.org/content/2013/07/31/re-visiting-the-secret-power-of-block-fomatting-context/) or using a left margin/padding equal to the width of the image. The media object must also clearfix its body which requires either `overflow:hidden` or having to use the pseudo-elements. -->
 
-有了 Flexbox 布局，一切都解决了。附带着，FLexbox 布局还允许我们设置任意设置头像的垂直对齐方式。我们可以轻松地把头像胰岛右边而不用改一行源代码。
+有了 Flexbox 布局，一切都解决了。附带着，FLexbox 布局还允许我们设置任意设置头像的垂直对齐方式。我们可以轻松地把头像移到右边而不用改一行源代码。
 <!-- With Flexbox these problems are solved. In addition, Flexbox allows us to vertically align the media object figure however we want. We can also easily align the figure to the right without needing to change the source order. -->
 
 ## 基础示例

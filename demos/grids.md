@@ -7,7 +7,7 @@ excerpt: Flexbox 满足了我们大部分对于栅格系统的需求。尺寸、
 现今大部分栅格系统都使用了两种布局方式中的一种：浮动 (`float`) 或者 內联块 (`inline-block`)。但是它们的初衷均不是真的用于布局 (layout)，也因此导致了诸多的问题和限制。
 <!-- Most grid systems today use one of two layout methods: `float` or `inline-block`. But neither of these methods were really intended to be used for layout and as a result have pretty significant problems and limitations. -->
 
-使用浮动 (float) 需要清楚浮动因此牵连出了一堆布局问题，最臭名昭著的是清除一个元素的浮动有时会强制它出现在一个不相关的页面部分的下边 (例如 [Bootstrap issue](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) )。并且，使用清除浮动通常会同时使用 before 和 after 两个伪元素，导致你不能将它们使用于其他用途。
+使用浮动 (float) 需要清除浮动，因此牵连出了一堆布局问题，最臭名昭著的是清除一个元素的浮动有时会强制它出现在一个不相关的页面部分的下边 (例如 [Bootstrap issue](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) )。并且，使用清除浮动通常会同时使用 before 和 after 两个伪元素，导致你不能将该伪元素使用于其他用途。
 <!-- Using floats requires clearing them which has a whole host of layout issues, most notoriously that clearing an element sometimes forces it below an unrelated part of the page (take this [Bootstrap issue](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) for example). In addition, clearing floats usually requires using both before and after pseudo-elements, preventing you from using them for something else. -->
 
 内联块布局最著名的问题是 [内联块之间孔空白问题](http://css-tricks.com/fighting-the-space-between-inline-block-elements/), 以及其所有 [解决方案](http://davidwalsh.name/remove-whitespace-inline-block) 都是 [hack](https://github.com/suitcss/components-grid/blob/master/lib/grid.css#L30) 和 [恼人](https://twitter.com/thierrykoblentz/status/305152267374428160) 的。
@@ -19,7 +19,7 @@ Flexbox 布局不仅结局了这些问题，还开启全新可能性的新世界
 ## Flexbox 栅格系统特性
 <!-- ## Features of a Flexbox Grid System -->
 
-栅格系统通常有数不清的尺寸选项，但是大部分时间你仅仅想要一个两栏或三栏的栅格系统。既然如此，我们为什么一定要把尺寸属性 (sizing classes) 写到每一个格子 (cell) 里？
+栅格系统通常有数不清的尺寸选项，但是通常情况你仅仅想要一个两栏或三栏的栅格系统。既然如此，我们为什么一定要把尺寸属性 (sizing classes) 写到每一个格子 (cell) 里？
 <!-- Grid systems usually come with a myriad of sizing options, but the vast majority of the time you just want two or three elements side-by-side. Given this, why should we be required to put sizing classes on every single cell? -->
 
 下列是我对于一个理想的栅格系统的标准。幸运的是，Flexbox 布局满足了大部分特性。
@@ -98,7 +98,7 @@ Flexbox 布局不仅结局了这些问题，还开启全新可能性的新世界
 ### 独立的尺寸
 <!-- ### Individual Sizing -->
 
-当你的需求不是等宽栅格的时候，可以添加尺寸属性到独立的栅格中。没有尺寸属性的栅格将简单地继续平分剩下的可用空间。
+当你的需求不是等宽栅格的时候，可以添加尺寸属性到特定的栅格中。没有尺寸属性的栅格将简单地继续平分剩下的可用空间。
 <!-- When equal widths aren't what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal. -->
 
 下边加了 "auto" 标签的栅格没有指定任何尺寸属性。
@@ -138,6 +138,7 @@ Flexbox 布局不仅结局了这些问题，还开启全新可能性的新世界
 </div>
 
 ### 响应式
+<!-- ### Responsive -->
 
 响应式栅格系统通过添加媒体查询到栅格元素或栅格容器来实现。当满足媒体查询的条件时，栅格系统就能自动调整。
 <!-- Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly. -->

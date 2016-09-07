@@ -5,13 +5,13 @@ template: home.html
 <section class="Section">
   <div class="Container">
     <h2 class="Section-heading">介绍</h2>
-    <p>CSS 长期以来缺乏合适的布局技术。 变形，动画，滤镜，对这门语言来说很有用，但是都没有解决 Web 开发者长期抱怨的主要问题。</p>
+    <p>CSS 长期以来缺乏合适的布局技术。 变形，动画，滤镜，对这门语言来说都很有用，但是都没有解决 Web 开发者长期抱怨的主要问题。</p>
     <!-- <p>CSS has been lacking proper layout mechanisms for far too long. Transitions, animations, filters, all of these are great and useful additions to the language, but they don't address the major problems that Web developers have been complaining about for what seems like an eternity.</p> -->
-    <p>终于，感谢 <a href="http://www.w3.org/TR/css3-flexbox/">Flexbox 布局</a>，我们有了解决方案。</p>
+    <p>终于，多亏了 <a href="http://www.w3.org/TR/css3-flexbox/">Flexbox 布局</a>，我们有了解决方案。</p>
     <!-- <p>Finally, thanks to <a href="http://www.w3.org/TR/css3-flexbox/">Flexbox</a>, we have a solution.</p> -->
-    <p>这个页面并不是另一个 CSS 框架。主要目的是展示曾经很困难甚至无法单独用 CSS 解决的问题，现在被 Flexbox 布局轻松解决。随着最近释出的Internet Explorer 11 和 Safari 6.1，最新的 Flexbox 版本被全部的现代浏览器支持。</p>
+    <p>这个页面并不是另一个 CSS 框架。主要目的是展示曾经很困难甚至无法单独用 CSS 解决的问题，现在被 Flexbox 布局轻松解决。随着最近释出的 Internet Explorer 11 和 Safari 6.1，最新的 Flexbox 语法已经被每一个的现代浏览器支持。</p>
     <!-- <p>This site is not another CSS framework. Instead, its purpose is to showcase problems once hard or impossible to solve with CSS alone, now made trivially easy with Flexbox. And with the recent release of Internet Explorer 11 and Safari 6.1, the latest Flexbox spec is now supported in every modern browser.</p> -->
-    <p>检查下边的 demo 。查看浏览器的检查器或者深入 <a href="https://github.com/philipwalton/solved-by-flexbox">源代码</a> 查看，一旦 Flexbox 成为主流，CSS 布局代码是多么的简单。</p>
+    <p>检查下边的 demo 。查看浏览器的网页审查工具或者深入 <a href="https://github.com/philipwalton/solved-by-flexbox">源代码</a> 查看，一旦 Flexbox 成为主流，CSS 布局代码将会变得多么的简单。</p>
     <!-- <p>Check out the demos below. View the styles in the Web inspector or dive into <a href="https://github.com/philipwalton/solved-by-flexbox">the source</a> to see just how easy CSS layout will become once Flexbox becomes mainstream.</p> -->
   </div>
 </section>
@@ -82,7 +82,7 @@ template: home.html
 
     <h3 class="Section-heading">警告和已知问题</h3>
     <ul class="Section-list">
-      <li>IE 10 支持 Flexbox 布局，但是但前版本仅支持 <a href="http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">Flexbox 的草案版本</a>: (<code>display:flexbox</code>)。</li>
+      <li>IE 10 支持 Flexbox 布局，但是当前版本仅支持 <a href="http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">Flexbox 的草案版本</a>: (<code>display:flexbox</code>)。</li>
       <!-- <li>IE 10 has Flexbox support but for a <a href="http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">draft version</a> of the current spec: (<code>display:flexbox</code>).</li> -->
       <li>Safari 6 以及更早的版本支持 <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">原始的</a> Flexbox 语法, 现在已经被淘汰: (<code>display:box</code>)。</li>
       <!-- <li>Safari 6 and earlier support the <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">original</a> Flexbox syntax, which is now obsolete: (<code>display:box</code>).</li> -->
@@ -103,7 +103,7 @@ template: home.html
     <!-- <p>Workarounds for non-compliant browsers are not shown in the code samples, but if you're curious about those implementation details, you can check out the source files. Each demo links to its source, and all browser-specific workarounds are well-documented, so don't be afraid to take a look.</p> -->
     <p>flexbox 布局自动化兼容性工具由 <a href="https://github.com/ai/autoprefixer">autoprefixer</a> 提供。如果你没使用 autoprefixer 来写 Flexbox 代码，那么，你可能会犯一些可怕的错误。</p>
     <!-- <p>The vendor prefixing and translating of current flex properties to their legacy equivalents is all handled by <a href="https://github.com/ai/autoprefixer">autoprefixer</a>. If you're writing Flexbox code and not using autoprefixer, well, you're making a horrible mistake.</p> -->
-    <p>在示例代码和源文件中使用的类名来自于 <a href="https://github.com/suitcss/suit">SUIT CSS</a>，基于 BEM 方法。 每个示例包含的可重用的 CSS 组件允许你复制修改适应你自己的项目。每个示例页面提供了各自组件的链接。</p>
+    <p>在示例代码和源文件中使用的类名来自于 <a href="https://github.com/suitcss/suit">SUIT CSS</a>，基于 BEM 方法。每个示例包含的可重用的 CSS 组件允许你复制修改适应你自己的项目。每个示例页面提供了各自组件的链接。</p>
     <!-- <p>The class naming convention used in the code samples and source files is taken from <a href="https://github.com/suitcss/suit">SUIT CSS</a>, which is based on BEM methodologies. Each example includes one or more reusable CSS components allowing you to adapt or copy these patterns in to your own projects. Links are provided to their respective components on each example page.</p> -->
     <p>如果你发现了错误或者想提供一些额外的示例，欢迎在 <a href="https://github.com/philipwalton/solved-by-flexbox">Github</a> 上开一个 issue 或者提交一个pull request。</p>
     <!-- <p>If you find a mistake or would like to suggest an additional example, feel free to open an issue or submit a pull request on <a href="https://github.com/philipwalton/solved-by-flexbox">Github</a>.</p> -->
@@ -119,7 +119,14 @@ template: home.html
       <li><a href="https://hufan-akari.github.io/solved-by-flexbox/">中文</a></li>
       <li><a href="http://hashrock.github.io/solved-by-flexbox-ja/">日本語</a></li>
     </ul>
-    <p>请注意，翻译并非官方提供，可能随着时间推移而过时。你可以在 Github 上发送一个 <a href="https://github.com/philipwalton/solved-by-flexbox/pull/new/master" class="rich-diff-level-one">pull request</a> 或者 <a href="https://github.com/philipwalton/solved-by-flexbox/issues/new" class="rich-diff-level-one">打开一个 issue</a> 提供你的翻译内容的链接。</p>
+    <p>请注意，翻译并非官方提供，可能随着时间推移而过时。你可以在 Github 上发送一个 <a href="https://github.com/philipwalton/solved-by-flexbox/pull/new/master" class="rich-diff-level-one">pull request</a> 或者 <a href="https://github.com/philipwalton/solved-by-flexbox/issues/new" class="rich-diff-level-one">开一个 issue</a> 提供你的翻译内容的链接。</p>
     <!-- <p>Please note that translations are unofficial and may be inaccurate or out of date. To submit your own translation, please submit a <a href="https://github.com/philipwalton/solved-by-flexbox/pull/new/master" class="rich-diff-level-one">pull request</a> or <a href="https://github.com/philipwalton/solved-by-flexbox/issues/new" class="rich-diff-level-one">open an issue</a> on Github and link to your translated content.</p> -->
+  </div>
+</section>
+<section  class="Section">
+  <div  class="Container">
+    <h2 class="Section-heading">关于该中文翻译版本</h2>
+    <p>该文档基于 <a href="https://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> 原始英文版本的 CC-BY 授权协议，由 <a href="https://github.com/hufan-Akari">hufan</a> 独自翻译。</p>
+    <p>欢迎任何关于翻译或其建议。请在 Github 上给我发送 <a href="https://github.com/hufan-Akari/solved-by-flexbox/pull/new/zh" class="rich-diff-level-one">pull request</a> 或者 <a href="https://github.com/hufan-Akari/solved-by-flexbox/issues/new" class="rich-diff-level-one">开一个 issue</a></p>
   </div>
 </section>

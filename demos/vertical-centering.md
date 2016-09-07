@@ -4,13 +4,13 @@ title: 垂直居中
 excerpt: 这个经典的问题问题一直被 CSS hackers 挑战了很多年，历史的解决方案没有一个能够完整地解决。有了 Flexbox 布局，终于成为了可能。
 ---
 
-一直以来确实好的方式实现垂直居中，是 CSS 的黑点。
+一直以来缺乏好的垂直居中的方法，是 CSS 的黑点。
 <!-- The lack of good ways to vertically center elements in CSS has been a dark blemish on its reputation for pretty much its entire existence. -->
 
-更糟糕的是，垂直居中的技术晦涩而又反直觉，最直接的选择(像  `vertical-align:middle`) 从未起过作用。
+更糟糕的是，目前的垂直居中的技术晦涩而又反直觉，最直接的选择(比如  `vertical-align:middle`) 从未起过作用。
 <!-- What makes matters worse is the techniques that do work for vertical centering are obscure and unintuitive, while the obvious choices (like `vertical-align:middle`) never seem to work when you need them. -->
 
-目前的[垂直解决方案](http://css-tricks.com/centering-in-the-unknown/) 使用了 从负外边距 到 `display:table-cell` 等荒谬的 hack 包括全高的伪元素。这些技术有时候能够生效，然而并不是所有情况都能如愿。如果你想垂直居中一个形状不确定，或者子元素不是父元素唯一的子元素呢？如果你能用伪元素居中 hack，但是你又想用伪元素做些其他的事呢？
+目前的[垂直解决方案](http://css-tricks.com/centering-in-the-unknown/) 使用了 从负外边距 到 `display:table-cell` 等荒谬的 hack ，包括全高的伪元素。这些技术有时候能够生效，然而并不是所有情况都能如愿。如果你想垂直居中一个形状不确定，或者子元素不是父元素唯一的子元素呢？如果你能用伪元素居中这种 hack，但是你又想用伪元素做些其他的事呢？
 <!-- The current landscape of [vertical centering options](http://css-tricks.com/centering-in-the-unknown/) ranges from negative margins to `display:table-cell` to ridiculous hacks involving full-height pseudo-elements. Yet even though these techniques sometimes get the job done, they don't work in every situation. What if the thing you want to center is of unknown dimensions and isn't the only child of its parent? What if you could use the pseudo-element hack, but you need those pseudo-elements for something else? -->
 
 用了 Flexbox 布局，不再纠结这些麻烦。你可以任意对齐(垂直或者水平)，仅仅设置`align-items`, `align-self`, 和 `justify-content` 这些属性就好。
@@ -27,7 +27,7 @@ excerpt: 这个经典的问题问题一直被 CSS hackers 挑战了很多年，�
   </div>
 </div>
 
-不像一些现存的垂直居中技术那样，Flexbox 垂直居中不会影响其相邻元素的对齐方式。
+不像一些现存的垂直居中技术，Flexbox 垂直居中并不会影响其相邻元素的对齐方式。
 <!-- Unlike some of the existing vertical alignment techniques, with Flexbox the presence of sibling elements doesn't affect their ability to be vertically aligned. -->
 
 <div class="Demo Demo--spaced u-ieMinHeightBugFix">

@@ -23,7 +23,7 @@ excerpt: 这是一个经典的 css-hack 布局挑战，历史上出现的方案�
 - They should require minimal markup.
 - The footer should "stick" to the bottom of the page when content is sparse. -->
 
-不幸的是，这些自然的需求由于原生css的限制，当前经典的圣杯布局的解决方案都不能完美满足以上所有。
+不幸的是，这些自然的需求由于原生css的限制，当前经典的圣杯布局的解决方案都不能完美满足以上所有的要点。
 <!-- Unfortunately, because of the nature of these goals and the original limitations of CSS, none of the classic solutions to this problem were ever able to satisfy all of them. -->
 
 有了 Flexbox 布局，终极的解决方案终于成为可能。
@@ -89,13 +89,13 @@ excerpt: 这是一个经典的 css-hack 布局挑战，历史上出现的方案�
 ### 响应式
 <!-- ### Being Responsive -->
 
-圣杯布局来自于每个人都使用个人计算机冲浪的时代的网页设计，但是随着移动设备的激增，圣杯布局已渐渐没落。
+圣杯布局来自于每个人都使用个人计算机冲浪的互联网时期的网页设计，但是随着移动设备的激增，圣杯布局已渐渐没落。
 <!-- The Holy Grail layout came from an era of Web design when pretty much everyone was browsing on a computer. But with the increasing number of mobile devices and the rising popularity of responsive design, the Holy Grail layout has gone mostly out of fashion. -->
 
 另一方面，使用 Flexbox 布局，创建一个移动设备优先和移动设备友好版本的圣杯布局很简单。其主旨就是把中间的部分默认指定为 `flex-direction:column` ，然后为拥有更宽屏幕的设备指定 `flex-direction:row` 。
 <!-- Either way, with Flexbox, creating a mobile-first and mobile-friendly version of the Holy Grail layout is easy. The gist is to simply make the center section `flex-direction:column` by default and then `flex-direction:row` for larger screens. -->
 
-这里式一个完全版的移动是被优先响应式示例。你可以调整浏览器大小来查看效果。
+这里是一个完整版的移动式被优先响应式示例。你可以调整浏览器大小来查看效果。
 <!-- Here's a complete example that is responsive and mobile-first. You can also resize this browser window to see it in action. -->
 
 ```css

@@ -9,6 +9,12 @@ html {
   color: hsl(0,0%,25%);
   font: 400 1em/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-rendering: optimizeLegibility;
+
+  text-align: justify;
+  text-justify: inter-ideograph;
+  -ms-text-justify: inter-ideograph;
+  -moz-text-align-last:justify;
+  -webkit-text-align-last:justify;
 }
 @media (--high-dppx) {
   html {

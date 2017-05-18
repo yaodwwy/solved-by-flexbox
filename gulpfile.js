@@ -24,7 +24,7 @@ const {argv} = require('yargs');
 /**
  * The output directory for all the built files.
  */
-const DEST = './build';
+const DEST = path.resolve('./build');
 
 /**
  * The name of the Github repo.
@@ -317,7 +317,7 @@ gulp.task('deploy', ['default', 'lint'], function() {
   // Delete all the existing files and add
   // the new ones from the build directory.
   sh.rm('-rf', './*');
-  sh.cp('-rf', path.join('..', DEST, '/*'), './');
+  sh.cp('-rf', path.join( DEST, '/*'), './');
   sh.exec('git add -A');
 
   // Commit and push the changes to

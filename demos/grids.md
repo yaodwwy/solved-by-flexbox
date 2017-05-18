@@ -1,6 +1,6 @@
 ---
 template: default.html
-title: 更好，更简单的栅格系统
+title: 更棒，更简洁的栅格系统
 excerpt: Flexbox 满足了我们大部分对于栅格系统的需求。尺寸、对齐仅用一两个属性就能搞定。
 ---
 

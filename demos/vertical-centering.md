@@ -1,7 +1,7 @@
 ---
 template: default.html
 title: 垂直居中
-excerpt: 这个经典的问题问题一直被 CSS hackers 挑战了很多年，历史的解决方案没有一个能够完整地解决。有了 Flexbox 布局，终于成为了可能。
+excerpt: 这个经典的问题一直被 CSS hackers 挑战了很多年，历史的解决方案没有一个能够完整地解决。有了 Flexbox 布局，终于成为了可能。
 ---
 
 一直以来缺乏好的垂直居中的方法，是 CSS 的黑点。

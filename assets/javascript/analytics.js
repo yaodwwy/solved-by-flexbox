@@ -14,14 +14,14 @@ import 'autotrack/lib/plugins/social-widget-tracker';
  * The tracking ID for your Google Analytics property.
  * https://support.google.com/analytics/answer/1032385
  */
-const TRACKING_ID = 'UA-40829935-1';
+const TRACKING_ID = 'UA-101915453-1';
 
 /**
  * Bump this when making backwards incompatible changes to the tracking
  * implementation. This allows you to create a segment or view filter
  * that isolates only data captured with the most recent tracking changes.
  */
-const TRACKING_VERSION = '3';
+const TRACKING_VERSION = '3-zh';
 
 
 /**

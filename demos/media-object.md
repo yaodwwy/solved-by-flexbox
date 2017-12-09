@@ -4,13 +4,13 @@ title: 媒体对象
 excerpt: 创建含有固定或变化的头像的媒体对象，不用担心溢出(overflow)，清除浮动(clearfixing)，或者块格式化内容(block formatting context)等 hack 。
 ---
 
-[媒体对象](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code) 是面向对象 CSS 的典型代表</a> (OOCSS). 它的简单实用让很多 CSS 开发者(包括我自己)转向了 OCSS 开发方法。
+[媒体对象](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code) 是面向对象 CSS 的典型代表</a> (OOCSS). 它的简单实用让很多 CSS 开发者(包括我自己)转向了 OOCSS 开发方法。
 <!-- The [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code) is the poster-child of Object Oriented CSS</a> (OOCSS). Its simplicity and utility have converted many a CSS developer (myself included) to the OOCSS methodology. -->
 
-但是像众多 CSS 布局技巧一样，媒体对象必须求助于各种技巧和 hack 来达成目标。
+但是像众多 CSS 布局技巧一样，媒体对象必须求助于各种奇技淫巧来达成目标。
 <!-- But like most CSS layout techniques, the media object must resort to tricks and hacks to accomplish its goals. -->
 
-媒体对象的正文不能出现在头像的下边，通过创建一个 [块格式化内容](http://www.stubbornella.org/content/2013/07/31/re-visiting-the-secret-power-of-block-fomatting-context/) 或者使用一个与图片等宽的左外边距(margin)/内边距(padding) 。媒体对象必须正文清除浮动，通过指定 `overflow:hidden` 或使用伪元素来达成。
+媒体对象的正文不能出现在头像的下边，通过创建一个 [块格式化内容(block formatting context)](http://www.stubbornella.org/content/2013/07/31/re-visiting-the-secret-power-of-block-fomatting-context/) 或者使用一个与图片等宽的左外边距(margin)/内边距(padding) 。媒体对象必须正文清除浮动，通过指定 `overflow:hidden` 或使用伪元素来达成。
 <!-- The media object's body must prevent text from wrapping below the image by either creating a [block formatting context](http://www.stubbornella.org/content/2013/07/31/re-visiting-the-secret-power-of-block-fomatting-context/) or using a left margin/padding equal to the width of the image. The media object must also clearfix its body which requires either `overflow:hidden` or having to use the pseudo-elements. -->
 
 有了 Flexbox 布局，一切都解决了。附带着，FLexbox 布局还允许我们设置任意设置头像的垂直对齐方式。我们可以轻松地把头像移到右边而不用改一行源代码。

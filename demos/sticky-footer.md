@@ -21,13 +21,13 @@ excerpt: 让你的页脚粘在底部一直以来是一个技巧。如果页脚�
 Flexbox 布局可以完美解决这类问题。众所周知， Flexbox 布局经常被用在水平布局中，然而在垂直布局中 Flexbox 布局也格外拿手。你所要做的就是把垂直部分包在 flex 容器中，并选择一个元素可以让它展开以高度自适应。它们会自动地利用容器所有可用空间。
 <!-- Flexbox is a perfect fit for this type of problem. While mostly known for laying out content in the horizontal direction, Flexbox actually works just as well for vertical layout problems. All you have to do is wrap the vertical sections in a flex container and choose which ones you want to expand. They'll automatically take up all the available space in their container. -->
 
-下边的示例中，容器被设置成窗口的高度，内容被设置成按需要扩展。*(注意：在垂直布局中你需要指定容器的高度，这一点和水平布局的自适应不同。)
+下边的示例中，容器被设置成窗口的高度，内容被设置成按需要扩展。*(注意：在垂直布局中你需要指定容器的高度，这一点和水平布局的自适应不同。)*
 <!-- In the example below, the container is set to the height of the window, and the content area is told to expand as needed. *(Note: in the vertical direction you need to specify a height for the container. This is different from the horizontal direction, which automatically expands to fit.)* -->
 
 ## HTML 代码
 <!-- ## The HTML -->
 
-```xml
+```html
 <body class="Site">
   <header>…</header>
   <main class="Site-content">…</main>

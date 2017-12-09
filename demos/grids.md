@@ -10,7 +10,7 @@ excerpt: Flexbox 满足了我们大部分对于栅格系统的需求。尺寸、
 使用浮动 (float) 需要清除浮动，因此牵连出了一堆布局问题，最臭名昭著的是清除一个元素的浮动有时会强制它出现在一个不相关的页面部分的下边 (例如 [Bootstrap issue](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) )。并且，使用清除浮动通常会同时使用 before 和 after 两个伪元素，导致你不能将该伪元素使用于其他用途。
 <!-- Using floats requires clearing them which has a whole host of layout issues, most notoriously that clearing an element sometimes forces it below an unrelated part of the page (take this [Bootstrap issue](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) for example). In addition, clearing floats usually requires using both before and after pseudo-elements, preventing you from using them for something else. -->
 
-内联块布局最著名的问题是 [内联块之间空白问题](http://css-tricks.com/fighting-the-space-between-inline-block-elements/), 以及其所有 [解决方案](http://davidwalsh.name/remove-whitespace-inline-block) 都是 [hack](https://github.com/suitcss/components-grid/blob/master/lib/grid.css#L30) 和 [恼人](https://twitter.com/thierrykoblentz/status/305152267374428160) 的。
+内联块布局最著名的问题是 [内联块之间空白问题](http://css-tricks.com/fighting-the-space-between-inline-block-elements/), 以及其所有 [解决方案](http://davidwalsh.name/remove-whitespace-inline-block) 都是 [奇技淫巧](https://github.com/suitcss/components-grid/blob/master/lib/grid.css#L30) 和 [恼人](https://twitter.com/thierrykoblentz/status/305152267374428160) 的。
 <!-- Inline block layouts must address the problem of [white-space between inline-block items](http://css-tricks.com/fighting-the-space-between-inline-block-elements/), and all of the [solutions](http://davidwalsh.name/remove-whitespace-inline-block) to that problem are [hacky](https://github.com/suitcss/components-grid/blob/master/lib/grid.css#L30) and [annoying](https://twitter.com/thierrykoblentz/status/305152267374428160). -->
 
 Flexbox 布局不仅结局了这些问题，还开启全新可能性的新世界的大门。
@@ -29,7 +29,7 @@ Flexbox 布局不仅结局了这些问题，还开启全新可能性的新世界
 - 每一行里的每一个栅格默认都是同宽同高。默认自适应。
 - 为了足够灵活，能够添加尺寸属性到单独的栅格中。没有添加的，仍然简单地平分剩下的可用空间。
 - 支持响应式布局，可以添加媒体查询到栅格中。
-- 每一个栅格可以在纯直方向上置顶，置底，剧中。
+- 每一个栅格可以在垂直方向上置顶，置底，剧中。
 - 如果让所有栅格拥有一致的大小和对其方式，在容器上添加属性，子元素能够继承，而不需要无意义的重复。
 - 栅格能够任意的嵌套。
 <!-- - By default, each grid cell is the same width and height as every other cell in the row. Basically they all size to fit by default.

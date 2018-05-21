@@ -1,39 +1,40 @@
-# Solved by Flexbox
+# [Solved by Flexbox](https://hufan-akari.github.io/solved-by-flexbox/) 
+[![Build Status](https://travis-ci.org/hufan-akari/solved-by-flexbox.svg?branch=zh)](https://travis-ci.org/hufan-akari/solved-by-flexbox)
 
-A showcase of problems once hard or impossible to solve with CSS alone, now made trivially easy with Flexbox.
+一组示例用于展示曾经难于或无法单独用 CSS 解决的问题, 现在使用 Flexbox 让问题迎刃而解.
 
-[View Site](https://philipwalton.github.io/solved-by-flexbox/)
+[点击查看](https://hufan-akari.github.io/solved-by-flexbox/)
 
-## Viewing the Site Locally
+## 在本地查看示例
 
-The Solved by Flexbox site can be built with [Node.js](http://nodejs.org/). If you have Node.js installed on your system, you can run the following commands to build and serve a local copy.
+Solved by Flexbox 页面使用 [Node.js](http://nodejs.org/) 构建. 如果你已经安装 Node.js, 你可以运行下列命令来构建一份本地的拷贝.
 
 ```sh
-# Clone the git repository and cd into the cloned directory.
-git clone https://github.com/philipwalton/solved-by-flexbox.git
+# 克隆这个 git 仓库并使用 cd 命令进入克隆的目录.
+git clone https://github.com/hufan-akari/solved-by-flexbox
 cd solved-by-flexbox
 
-# Install the dependencies
+# 安装依赖
 npm install
 
-# Build and serve the site at http://localhost:4000
+# 运行, 可以访问 http://localhost:4000 查看
 npm start
 ```
 
-This starts up a local server on port 4000. To view the site in your browser, navigate to [http://localhost:4000](http://localhost:4000). If you want to use a different port, you can pass the port number as an argument to `npm start`:
+这个命令会启动一个端口号为 4000 的本地服务. 在浏览器访问 [http://localhost:4000](http://localhost:4000) 即可查看页面. 如果你想使用不同的端口, 可以在 `npm start` 命令后传入参数:
 
 ```sh
 npm start -- -p 8080
 ```
 
-In addition to building the site and serving it locally, this will also listen for any changes and rebuild the site as needed. This allows you to play around with the code, refresh the browser, and see your changes instantly.
+此外, 本地启动的服务会监听文件修改, 并自动重新按需构建. 这允许你测试代码, 在浏览器刷新, 并立即查看结果.
 
-## Translations
+## 翻译
 
-The following translations have been graciously provided by the community:
+下面的翻译由热心的社区提供:
 
 * [Chinese](https://hufan-akari.github.io/solved-by-flexbox/)
 * [Japanese](http://hashrock.github.io/solved-by-flexbox-ja/)
 * [Korean](https://hyunseob.github.io/solved-by-flexbox-kr/)
 
-Please note that translations are unofficial and may be inaccurate or out of date. To submit your own translation, please submit a [pull request](https://github.com/philipwalton/solved-by-flexbox/pull/new/master) or [open an issue](https://github.com/philipwalton/solved-by-flexbox/issues/new) and link to your translated content.
+请注意, 翻译并非官方提供, 可能随着时间推移而过时. 你可以在 Github 上发送一个 [pull request](https://github.com/philipwalton/solved-by-flexbox/pull/new/master) 或者 [开一个 issue](https://github.com/philipwalton/solved-by-flexbox/issues/new) 提供你的翻译内容的链接.
